@@ -1,0 +1,110 @@
+/*
+    En la seccion del 'head' (del HTML) deben de poner este link: 
+    <link rel="stylesheet" href="css/styles.css">
+    Eso es para que este archivo se conecte con sus archivos.
+
+
+  *****************************
+  VARIABLES GLOBALES (:root) // Es una de las consignas del practico.
+  Qué es esto:
+  Son "alias" para nuestros estilos. Si necesitamos usar el color principal, 
+  en lugar de escribir el código hexadecimal (ej: #2c3e50), usamos la variable.
+
+  Cómo la vamos a usar;
+  En cualquier parte de su CSS cuando tengan que definir algun color, fuente, espaciado,etc, escriban: var(--nombreDeLaVariable)
+  Ejemplo: background-color: var(--colorFondo);
+
+  Esto es por si decidimos cambiar el color de toda la app, solo lo editamos 
+  aquí arriba y se actualiza en todas nuestras páginas automáticamente.
+  Si necesitan cambiar de color lo pueden hacer ahí en esa seccion directamente. Asi tenemos todo los mismos estilos, no hay 
+  drama si quieren crear una nueva que ustedes crean necesario. Cualquier duda, la IA, nuestra amiga fiel jaja, o consultan al grupo.
+  A otro detalle importante, NO hagamos uso de etiquetas directamente para dar estilo, por ejemplo h1{ color: red}
+  porque al ser un solo archivo podemos cambiar todos los h1 del proyecto. Vamos a tener que crear clasess para referirnos a
+  las etiquetas, asi no pisamos el trabajo de otro compañeo.
+  
+*/
+:root {
+    --colorPrimario:#2c3e50;
+    --colorSecundario:#0755a3;
+    --colorTerciario:rgb(89, 171, 244);
+    --fuentePrincipal: 'Segoe UI', Arial, sans-serif;
+    --colorTexto: black;
+    /**/
+    --colorFondo:#ebf2fa;
+    
+    --espaciado: 20px;
+}
+
+
+
+.bodyIndex{
+    margin: 0;
+    background-color:var(--colorFondo);
+    font-family: var(--fuentePrincipal);
+
+    /*uso del grid*/
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+}
+.cabecera{
+    background-color: var(--colorPrimario);
+    color: aliceblue;
+    padding: var(--espaciado);
+    text-align: center;
+}
+.navLista{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    /*gap: var(--espaciado);*/
+    
+    
+}
+.navLista a{
+    color: aliceblue;
+    text-decoration: none;
+    /*configuracion para que los enlaces sean mas visibles y anchos*/
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out;/*para el uso del hover y active*/
+}
+/*uso de las animaciones al pasar por un enlace*/
+.navLista a:hover {
+    color: var(--colorTerciario); /*Cambia al color que resalte*/
+    display: inline-block; /* Necesario para que el transform*/
+    transform: scale(1.1);
+    
+}
+.navLista a:active {
+    color: var(--colorSecundario); /* color al hacer click en el enlace */
+}
+.contenedorPrincipal{
+    display: flex;
+    flex-wrap: wrap;/*si las tarjetas no entras saltan a la siguiente fila*/
+    justify-content: center;
+    gap: var(--espaciado);
+    padding: var(--espaciado);
+}
+.tarjeta{
+    background-color: #ffffff;/*var(--colorSecundario);*/
+
+
+    border-radius: 8px;
+    padding: var(--espaciado);
+    
+    /* Un detalle para que se despeguen del fondo:*/ 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--colorPrimario);
+}
+.piePagina{
+    color: aliceblue;
+    background-color: var(--colorPrimario);
+    text-align: center;
+    padding: var(--espaciado);
+}
+.piePagina p {
+    margin: 0;
+}

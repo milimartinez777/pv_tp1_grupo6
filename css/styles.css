@@ -47,13 +47,37 @@
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-image: url('/img/fondoGeneral3.png');
+    background-size: cover;
+    
 }
 .cabecera{
     background-color: var(--colorPrimario);
     color: var(--colorTerciario);
-    padding: var(--espaciado);
-    text-align: center; 
+   /*para alinear logo y título*/
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    gap: var(--espaciado);  
+    flex-wrap: wrap;   
+    gap: 10px;
 }
+.cabecera h1 {
+    text-align: center;
+    margin: 0;
+     padding: 10px;
+}
+.logoPrincipal img {
+    height: 100px;
+    width: auto;/*Mantiene la proporción del tamaño del logo*/
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(31, 221, 205, 0.4));
+    transition: filter 0.3s ease;/*transición para cuando pase el mouse */
+}
+.logoPrincipal:hover img {
+    filter: drop-shadow(0 0 15px rgba(31, 221, 205, 1));
+}
+
 .navLista{
     display: flex;
     justify-content: center;
@@ -98,12 +122,13 @@
     /*Para que se despeguen del fondo:*/ 
     box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
     border-left: 5px solid var(--colorPrimario);
-    background-image: url(/img/imgTarjetas.png);
+    background-image: url('/img/imgTarjetas.png');
     background-size: cover;
 }
 .tarjetaNovedades{
     flex: 2;
     min-width: 350px;
+    
 }
 .tarjetaNovedades h2{
     padding-left: 20px;
@@ -149,7 +174,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
     text-align: center;
-   background-image: url(/img/imgTarjetas.png);
+    background-image: url('/img/imgTarjetas.png');
     background-size: cover;
     color: var(--colorTerciario);
 }
@@ -172,7 +197,7 @@
     font-weight: bold;
     box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
     transition: transform 0.2s;
-    background-image: url(/img/fondoGeneral1.png);
+    background-image: url('/img/fondoGeneral1.png');
     background-size: cover;
 }
 

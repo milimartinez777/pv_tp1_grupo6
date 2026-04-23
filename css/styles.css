@@ -188,5 +188,48 @@
 .piePagina p {
     margin: 0;
 }
-
-
+/***********************Sección de proyectos.html***********/
+.bodyProyectos{
+    margin: 0;
+    background-color:var(--colorFondo);
+    font-family: var(--fuentePrincipal);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.cabecerapr{
+    background-color: var(--colorPrimario);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.cabecerapr h1{
+    text-align: center;
+    color: var(--colorTerciario);
+    font-family: var(--fuentePrincipal);
+    padding: var(--espaciado);
+    font-size: 2.2rem;
+}
+.navListPr{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+.navListPr a{
+    color: var(--colorTerciario);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out;/*para el uso del hover y active*/
+    display: inline-block; /* Necesario para que el transform*/
+}
+.navListPr a:hover {
+    color: var(--colorSecundario); /*Cambia al color que resalte*/ 
+    transform: scale(1.1);  
+}
+.navListPr a:active {
+    color: var(--colorFondo); /* color al hacer click en el enlace */
+}

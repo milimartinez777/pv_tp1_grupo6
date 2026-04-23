@@ -108,3 +108,57 @@
 .piePagina p {
     margin: 0;
 }
+.bodyDetalle{
+    margin: 0;
+    background-color:var(--colorFondo);
+    font-family: var(--fuentePrincipal);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    text-align: center;
+    
+    
+    
+}
+.parrafosD {
+    text-align: justify;
+    padding: 20px 50px;
+
+    background-color: var(--colorfondo);
+    border: 4px solid var(--colorPrimario);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column; /* Pone un párrafo debajo del otro */
+    gap: 10px;
+    max-width: 1000px;
+    margin: auto;      /* Centra la cajita en la pantalla */
+
+    transition: 0.6s;       /* Suaviza el cambio */
+}
+
+.parrafosD:hover {
+    background-color: var(--colorTerciario);  /* Cambia de color al pasar el mouse */
+    transition: 0.6s;       /* Suaviza el cambio */
+    transform: translateY(-5px);
+}
+
+.titulosD:hover{
+    color: var(--colorTerciario); /*Cambia al color que resalte*/
+    transform: scale(1.2);
+
+}
+
+.aD{
+    list-style: none;
+    text-decoration-line: none;
+    gap: 20px;
+}
+.aD:hover {
+    transform: scale(1.1);
+}
+.bD{
+    list-style: none;
+}
+
+

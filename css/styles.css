@@ -22,20 +22,21 @@
   porque al ser un solo archivo podemos cambiar todos los h1 del proyecto. Vamos a tener que crear clasess para referirnos a
   las etiquetas, asi no pisamos el trabajo de otro compañeo.
   
+
+  header: #0B2F2A
+  fondo: #1F3C39
+
+  color de tarjeta: background: radial-gradient(at top left, #128C7E 0%, #075E54 100%);
 */
 :root {
-    --colorPrimario:#2c3e50;
-    --colorSecundario:#0755a3;
-    --colorTerciario:rgb(89, 171, 244);
+    --colorFondo:#39635f;
+    --colorPrimario:#0B2F2A;
+    --colorSecundario:#26a195;
+    --colorTerciario:aliceblue;
     --fuentePrincipal: 'Segoe UI', Arial, sans-serif;
     --colorTexto: black;
-    /**/
-    --colorFondo:#ebf2fa;
-    
     --espaciado: 20px;
 }
-
-
 
 .bodyIndex{
     margin: 0;
@@ -46,40 +47,35 @@
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    
 }
 .cabecera{
     background-color: var(--colorPrimario);
-    color: aliceblue;
+    color: var(--colorTerciario);
     padding: var(--espaciado);
-    text-align: center;
+    text-align: center; 
 }
 .navLista{
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 40px;
-    /*gap: var(--espaciado);*/
-    
-    
 }
 .navLista a{
-    color: aliceblue;
+    color: var(--colorTerciario);
     text-decoration: none;
     /*configuracion para que los enlaces sean mas visibles y anchos*/
     font-weight: bold;
     font-size: 1.1rem;
     transition: transform 0.2s ease-in-out;/*para el uso del hover y active*/
+    display: inline-block; /* Necesario para que el transform*/
 }
 /*uso de las animaciones al pasar por un enlace*/
 .navLista a:hover {
-    color: var(--colorTerciario); /*Cambia al color que resalte*/
-    display: inline-block; /* Necesario para que el transform*/
-    transform: scale(1.1);
-    
+    color: var(--colorSecundario); /*Cambia al color que resalte*/ 
+    transform: scale(1.1);  
 }
 .navLista a:active {
-    color: var(--colorSecundario); /* color al hacer click en el enlace */
+    color: var(--colorFondo); /* color al hacer click en el enlace */
 }
 .contenedorPrincipal{
     display: flex;
@@ -88,19 +84,103 @@
     gap: var(--espaciado);
     padding: var(--espaciado);
 }
+.bloqueEstadisticas{
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado);
+    flex: 1;/*ocupa una parte del espacio*/
+    min-width: 300px;
+    text-align: center;
+}
 .tarjeta{
-    background-color: #ffffff;/*var(--colorSecundario);*/
-
-
     border-radius: 8px;
     padding: var(--espaciado);
-    
-    /* Un detalle para que se despeguen del fondo:*/ 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /*Para que se despeguen del fondo:*/ 
+    box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
     border-left: 5px solid var(--colorPrimario);
+    background-image: url(/img/imgTarjetas.png);
+    background-size: cover;
+}
+.tarjetaNovedades{
+    flex: 2;
+    min-width: 350px;
+}
+.tarjetaNovedades h2{
+    padding-left: 20px;
+    color: var(--colorTerciario);
+}
+.tarjetaNovedades li{
+    color: var(--colorTerciario);
+    font-size: 1.05rem;
+    margin-bottom: 15px; /*Separación entre novedades*/
+    line-height: 1.5;/*altura entre cada linea*/
+    font-weight: 500;
+}
+.tarjetaNovedades a{
+    color: var(--colorSecundario);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bloqueEstadisticas .tarjeta p {/*Para el número de la estadística*/
+    font-size: 2.2rem; /* */
+    font-weight: bold;
+    margin: 5px 0; /*Espacio arriba y abajo del número*/
+    color: var(--colorTerciario);
+}
+
+.bloqueEstadisticas .tarjeta small {/*Para el texto de contexto*/
+    display: block;  /* Para que ocupe su propia línea */
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--colorTerciario);
+}
+
+.bloqueEstadisticas .tarjeta h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: var(--colorTerciario);
+}
+
+.barraLateral{
+    flex: 0.5;  /*espacio menor que las estadísticas*/
+    min-width: 200px;
+    padding: var(--espaciado);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
+    text-align: center;
+   background-image: url(/img/imgTarjetas.png);
+    background-size: cover;
+    color: var(--colorTerciario);
+}
+
+.contenedorMiniCartas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.miniCarta {
+    height: 60px; 
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--colorTerciario);
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
+    transition: transform 0.2s;
+    background-image: url(/img/fondoGeneral1.png);
+    background-size: cover;
+}
+
+.miniCarta:hover {
+    transform: scale(1.03);
 }
 .piePagina{
-    color: aliceblue;
+    color: var(--colorTerciario);
     background-color: var(--colorPrimario);
     text-align: center;
     padding: var(--espaciado);
@@ -108,7 +188,8 @@
 .piePagina p {
     margin: 0;
 }
-.bodyDetalle{
+
+.bodyProyectos{
     margin: 0;
     background-color:var(--colorFondo);
     font-family: var(--fuentePrincipal);
@@ -120,6 +201,20 @@
     
     
 }
+
+.bodyDetalle{
+   margin: 0;
+    background-color:var(--colorFondo);
+    font-family: var(--fuentePrincipal);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    text-align: center;
+     
+}
+
+
+
 .parrafosD {
     text-align: justify;
     padding: 20px 50px;
@@ -162,3 +257,40 @@
 }
 
 
+}
+.cabecerapr{
+    background-color: var(--colorPrimario);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.cabecerapr h1{
+    text-align: center;
+    color: var(--colorTerciario);
+    font-family: var(--fuentePrincipal);
+    padding: var(--espaciado);
+    font-size: 2.2rem;
+}
+.navListPr{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+.navListPr a{
+    color: var(--colorTerciario);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out;/*para el uso del hover y active*/
+    display: inline-block; /* Necesario para que el transform*/
+}
+.navListPr a:hover {
+    color: var(--colorSecundario); /*Cambia al color que resalte*/ 
+    transform: scale(1.1);  
+}
+.navListPr a:active {
+    color: var(--colorFondo); /* color al hacer click en el enlace */
+}

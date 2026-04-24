@@ -6,8 +6,8 @@
         <title>Mi Perfil</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
-        <header class="cabecera">
+    <body class="bodyMiPerfil">
+        <header class="cabeceraMiPerfil">
             <a href="index.html" class="logoPrincipal">
             <img src="img/logito.png" alt="Nombre la marca">
             </a>
@@ -64,14 +64,14 @@
                 <h3>Crear Nuevo Perfil</h3>
                     <form class="formularioPerfilNuevo">
                         
-                        <label>Nombre:</label> 
-                        <input type="text">
-                        
-                        <label>Rol:</label> 
-                            <select name="rol">
-                                <option value="Alumno">Alumno</option>
-                                <option value="Docente">Docente</option>
-                            </select>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Ingrese nombre">
+
+                        <label for="rol">Rol:</label>
+                        <select id="rol">
+                            <option>Alumno</option>
+                            <option>Docente</option>
+                        </select>
                         <input type="submit" value="Crear Perfil">
 
                     </form>

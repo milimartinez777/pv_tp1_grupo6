@@ -36,6 +36,12 @@
     --fuentePrincipal: 'Segoe UI', Arial, sans-serif;
     --colorTexto: black;
     --espaciado: 20px;
+
+    /**variables para los colores de las tarjetas en Mi Perfil**/
+    --colorBlanco:#ffffff;
+    --colorTarjeta:#f8fafc;
+    --colorBorde:#d6e4e3;
+    --sombra:0 4px 12px rgba(0,0,0,0.12);
 }
 
 .bodyIndex{
@@ -379,4 +385,136 @@
     background-color: #2d3e3e;
     color: white;
     cursor: pointer;
+}
+/***************** Estilos para el archivo Mi Perfil ***************/
+.bodyMiPerfil{
+    margin:0;
+    min-height: 100vh;
+    font-family:var(--fuentePrincipal);
+    background-color:var(--colorFondo);
+    background-image:url('../img/fondoGeneral3.png');
+    background-size:cover;
+
+    min-height:100vh;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+}
+.cabeceraMiPerfil{
+    background-color: var(--colorPrimario);
+    color: var(--colorTerciario);  
+    justify-content: center; 
+    gap: var(--espaciado);  
+    flex-wrap: wrap;   
+    gap: 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.contenedorPrincipalMiPerfil{
+    width:90%;
+    max-width:1200px;
+
+    margin:30px auto;
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:var(--espaciado);
+}
+
+.tarjetas{
+    background-color:var(--colorBlanco);
+    border-radius:15px;
+    padding:25px;
+    box-shadow:var(--sombra);
+}
+
+.tarjetas h3,
+.tarjetas h4{
+    color:var(--colorPrimario);
+    margin-bottom:20px;
+}
+
+.Perfiles{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.tarjetaPerfilExistente{
+    background-color:var(--colorTarjeta);
+    border:1px solid var(--colorBorde);
+    border-radius:12px;
+
+    padding:18px;
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.tarjetaPerfilExistente:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--sombra);
+}
+
+.tarjetaPerfilExistente img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:12px;
+}
+
+.tarjetaPerfilExistente h4{
+    margin-bottom:8px;
+    color:var(--colorPrimario);
+}
+
+.tarjetaPerfilExistente p{
+    color:#555;
+    font-weight:bold;
+}
+
+.formularioPerfilNuevo{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.formularioPerfilNuevo label{
+    font-weight:bold;
+    color:var(--colorPrimario);
+}
+
+.formularioPerfilNuevo input,
+.formularioPerfilNuevo select{
+    padding:12px;
+    border:1px solid #cccccc;
+    border-radius:8px;
+    font-size:1rem;
+    font-family:var(--fuentePrincipal);
+}
+
+
+.formularioPerfilNuevo input:focus,
+.formularioPerfilNuevo select:focus{
+    outline:none;
+    border-color:var(--colorSecundario);
+}
+
+
+.formularioPerfilNuevo input[type="submit"]{
+    background-color:var(--colorSecundario);
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.formularioPerfilNuevo input[type="submit"]:hover{
+    background-color:var(--colorPrimario);
+}
+
+.formularioPerfilNuevo input[type="submit"]:active{
+    transform:scale(0.97);
 }

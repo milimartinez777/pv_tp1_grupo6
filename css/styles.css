@@ -336,3 +336,47 @@
 .navListPr a:active {
     color: var(--colorFondo); /* color al hacer click en el enlace */
 }
+.contenedorProyectos {
+    display: grid;
+    /* Columna 1 (Filtros): 260px | Columna 2 (Proyectos): El resto (1fr) */
+    grid-template-columns: 260px 1fr;
+    gap: 30px; /* Separación entre el lateral y las tarjetas */
+    padding: 20px;
+    align-items: flex-start;
+}
+.seccionFiltros {
+    background-color: #1a2a2a; /* Verde oscuro del proyecto */
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.seccionFiltros h2 {
+    font-size: 1.4rem;
+    color: #20c997; /* Turquesa para resaltar títulos */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.controlFiltro {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.controlFiltro label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.controlFiltro select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2d3e3e;
+    color: white;
+    cursor: pointer;
+}

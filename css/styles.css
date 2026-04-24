@@ -221,10 +221,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    text-align: center;
-    
-    
-    
+    text-align: center; 
 }
 /*  ---------------------DETALLE---------------------------*/
 .bodyDetalle{
@@ -303,8 +300,6 @@
     list-style: none;
 }
 
-
-}
 .cabecerapr{
     background-color: var(--colorPrimario);
     margin: 20px;

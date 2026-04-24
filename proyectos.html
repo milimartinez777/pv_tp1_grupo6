@@ -20,93 +20,96 @@
     </nav>
 </header>
 
-<main>
+<main class="contenedorProyectos">
 
     <!-- Filtros -->
-    <aside id="Filtros"> 
+    <aside id="Filtros" class="seccionFiltros"> 
         <h2>Filtros</h2>
-
-        <label>Categoría:</label>
-        <select>
+        <div class="controlFiltro">
+           <label>Categoría:</label>
+           <select>
             <option>Programación</option>
             <option>Matemática</option>
             <option>Diseño</option>
-        </select>
+           </select>
+        </div>
 
         <br><br>
-
-        <label>Año:</label>
-        <select>
-            <option>2023</option>
-            <option>2024</option>
-            <option>2025</option>
-        </select>
+        <div class="controlFiltro">
+          <label>Año:</label>
+            <select>
+              <option>2023</option>
+              <option>2024</option>
+               <option>2025</option>
+            </select>
+        </div>
 
         <br><br>
-
-        <label>Estado:</label>
-        <select>
-            <option>En curso</option>
-            <option>Finalizado</option>
-        </select>
+        <div class="controlFiltro">
+            <label>Estado:</label>
+              <select>
+                <option>En curso</option>
+                <option>Finalizado</option>
+              </select>
+        </div>
     </aside>
     
     <!-- Lista de proyectos -->
-    <section>
-        <h2>Lista de Proyectos</h2>
-        <ul>
+    <section class="galeriaProyectos">
+        <h2>Galería de Proyectos</h2>
+        <!--ul>
             <li>Sistema de Gestión de Biblioteca Escolar</li>
             <li>Plataforma de Apoyo Matemático</li>
             <li>Campus Virtual Educativo</li>
             <li>Organizador de Tareas Académicas</li>
             <li>Simulador de Experimentos de Física</li>
-        </ul>
+        </ul>-->
 
-        <article>
+        <article class="tarjetaProyectos">
             <h3>Sistema de Gestión de Biblioteca Escolar</h3>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEYUbg_9c-S7ivONCw5WdQsBqKGI1eTqBdYA&s" height="250px" alt="Proyecto 1">
             <p>Aplicación web que permite registrar préstamos, devoluciones y disponibilidad de libros de una biblioteca escolar.</p>
-            <p>Categoría: Programación</p>
-            <a href="detalle.html">Ver detalle</a>
+            <p class="catEtiquetapr">Categoría: Programación</p>
+            <a href="detalle.html"class="botonaccion">Ver detalle</a>
         </article>
 
-        <article>
+        <article class="tarjetaProyectos">
             <h3>App de Matemática</h3>
             <img src="https://wwwhatsnew.com/wp-content/uploads/2020/08/Paso-a-paso-para-resolver-ecuaciones.jpg" height="200px" alt="Proyecto 2">
             <p>Sitio interactivo que ayuda a estudiantes a resolver ejercicios de álgebra y aritmática paso a paso.</p>
-            <p>Categoría: Matemática</p>
-            <a href="detalle.html">Ver detalle</a>
+            <p class="catEtiquetapr">Categoría: Matemática</p>
+            <a href="detalle.html" class="botonaccion">Ver detalle</a>
         </article>
 
-        <article>
+        <article class="tarjetaProyectos">
             <h3>Campus Virtual Educativo</h3>
             <img src="https://www.evolmind.com/wp-content/uploads/2019/03/Uso-del-aula-virtual-%C2%BFComo-sacar-el-maximo-rendimiento_l.webp" height="200px" alt="Proyecto 3">
             <p>Plataforma web para la gestión de cursos online materiales de estudio y comunicación entre docentes y alumnos.</p>
-            <p>Categoría: Diseño</p>
-            <a href="detalle.html">Ver detalle</a>
+            <p class="catEtiquetapr">Categoría: Diseño</p>
+            <a href="detalle.html" class="botonaccion">Ver detalle</a>
         </article>
-        <article>
+        <article class="tarjetaProyectos">
             <h3>Organizador de tareas academicas</h3>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPepOl4W5si5pxa_Cr7Kwz_KVjSN_ObhBj6A&s" height="250px" alt="Proyecto 4">
             <p>Herramienta digital destinada a estudiantes para que planifiquen sus actividades, fechas de entrega y exámenes.</p>
-            <p>Categoría: Programación</p>
-            <a href="detalle.html">Ver detalle</a>
+            <p class="catEtiquetapr">Categoría: Programación</p>
+            <a href="detalle.html" class="botonaccion">Ver detalle</a>
         </article>
 
-        <article>
+        <article class="tarjetaProyectos">
             <h3>Simulador de experimentos de Física</h3>
             <img src="https://www.cienytec.com/picts/vrlab-exp-q-titulacion-acido-base-9x4.jpg" height="200px" alt="Proyecto 5">
             <p>Aplicación que permite visualizar fenómenos físicos ediante simulaciones interactivas para facilitar el aprendizaje.</p>
-            <p>Categoría: Ciencia</p>
-            <a href="detalle.html">Ver detalle</a>
+            <p class="catEtiquetapr">Categoría: Ciencia</p>
+            <a href="detalle.html" class="botonaccion">Ver detalle</a>
         </article>
 
     </section>
 
 </main>
 
-<footer>
-    <p>© 2026 Plataforma Educativa</p>
+<footer class="piepaginaPr">
+    <p>@ Analista Programador Universitario - 2026</p>
 </footer>
 
 </body>

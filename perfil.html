@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mi Perfil</title>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <header>
-            <h2>Información Personal de Usuarios</h2>
+        <header class="cabecera">
+            <a href="index.html" class="logoPrincipal">
+            <img src="img/logito.png" alt="Nombre la marca">
+            </a>
+        <h1 >Gestor de Proyectos Académicos | Mi Perfil </h1>
+            <nav >
+                <ul class="navLista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="perfil.html">Mi Perfil</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <section>
-                <!--Perfiles Existentes-->
+        <main class="contenedorPrincipalMiPerfil">
+            <!--Perfiles Existentes-->
+            <section class="tarjetas">
                 <h3>Perfiles Existentes</h3>
-                <ol>
-                        <li>Nombre: Juan <br> Rol: Alumno <br> 
-                            <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="alumno"></li>
-                        <li>Nombre: David <br>Rol: Docente<br>
-                            <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="docente"></li>
-                        <li>Nombre: Jonatan <br>Rol: Alumno<br>
-                            <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="alumno"></li>
-                        <li>Nombre: Brenda <br>Rol: Alumno<br>
-                            <img src="https://us.123rf.com/450wm/djvstock/djvstock1701/djvstock170108921/70085525-business-executive-woman-icon-vector-illustration-graphic-design.jpg" alt="alumno"></li>
-                        <li>Nombre: Milagro <br>Rol: Alumno<br>
-                            <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="alumno"></li>
-                        <li>Nombre: María <br>Rol: Alumno<br>
-                            <img src="https://us.123rf.com/450wm/djvstock/djvstock1701/djvstock170108921/70085525-business-executive-woman-icon-vector-illustration-graphic-design.jpg" alt="alumno"></li>
-                        <li>Nombre: Ariel <br>Rol: Docente<br>
-                            <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="docente"></li>               
-                </ol>
+                <div class="Perfiles">
+
+                    <article class="tarjetaPerfilExistente">
+                        <h4>Catriel Paco</h4>
+                        <p>Alumno</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="alumno">
+                    </article>
+                    <article class="tarjetaPerfilExistente">
+                        <h4>Chita Rodriguez</h4>
+                        <p>Docente</p>
+                        <img src="https://us.123rf.com/450wm/djvstock/djvstock1701/djvstock170108921/70085525-business-executive-woman-icon-vector-illustration-graphic-design.jpg" alt="docente">
+                    </article>
+                    <article class="tarjetaPerfilExistente">
+                        <h4>Patricio Roca</h4>
+                        <p>Alumno</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="alumno">
+                    </article>
+                    <article class="tarjetaPerfilExistente">
+                        <h4>Soledad Guanca</h4>
+                        <p>Docente</p>
+                        <img src="https://us.123rf.com/450wm/djvstock/djvstock1701/djvstock170108921/70085525-business-executive-woman-icon-vector-illustration-graphic-design.jpg" alt="docente">
+                    </article>
+                    <article class="tarjetaPerfilExistente">
+                        <h4>Agustín Bariloche</h4>
+                        <p>Alumno</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10691/10691640.png" alt="alumno">
+                    </article>
+                    <article class="tarjetaPerfilExistente">
+                        <h4>Celeste Blanca</h4>
+                        <p>Docente</p>
+                        <img src="https://us.123rf.com/450wm/djvstock/djvstock1701/djvstock170108921/70085525-business-executive-woman-icon-vector-illustration-graphic-design.jpg" alt="docente">
+                    </article>
+
+                </div>
             </section>
-            <section>
-                <!--Nuevo Perfil-->
+            <!--Nuevo Perfil-->
+            <section class="tarjetas">
                 <h3>Crear Nuevo Perfil</h3>
-                    <form>
-                        <label>Nombre: 
-                            <input type="text"><br>
-                        </label>
-                        <br>
-                        <label>Rol: 
-                                <select name="rol">
-                                    <option value="Alumno">Alumno</option>
-                                    <option value="Docente">Docente</option>
-                                </select>
-                        <br>
-                        </label>
-                        <br>
+                    <form class="formularioPerfilNuevo">
+                        
+                        <label>Nombre:</label> 
+                        <input type="text">
+                        
+                        <label>Rol:</label> 
+                            <select name="rol">
+                                <option value="Alumno">Alumno</option>
+                                <option value="Docente">Docente</option>
+                            </select>
                         <input type="submit" value="Crear Perfil">
+
                     </form>
             </section>
         </main>
+
+        <footer class="piePagina">
+        <p>@ Analista Programador Universitario - 2026 </p>
+        </footer>
+
     </body>
     
 </html>

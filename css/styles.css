@@ -1,33 +1,3 @@
-/*
-    En la seccion del 'head' (del HTML) deben de poner este link: 
-    <link rel="stylesheet" href="css/styles.css">
-    Eso es para que este archivo se conecte con sus archivos.
-
-
-  *****************************
-  VARIABLES GLOBALES (:root) // Es una de las consignas del practico.
-  Qué es esto:
-  Son "alias" para nuestros estilos. Si necesitamos usar el color principal, 
-  en lugar de escribir el código hexadecimal (ej: #2c3e50), usamos la variable.
-
-  Cómo la vamos a usar;
-  En cualquier parte de su CSS cuando tengan que definir algun color, fuente, espaciado,etc, escriban: var(--nombreDeLaVariable)
-  Ejemplo: background-color: var(--colorFondo);
-
-  Esto es por si decidimos cambiar el color de toda la app, solo lo editamos 
-  aquí arriba y se actualiza en todas nuestras páginas automáticamente.
-  Si necesitan cambiar de color lo pueden hacer ahí en esa seccion directamente. Asi tenemos todo los mismos estilos, no hay 
-  drama si quieren crear una nueva que ustedes crean necesario. Cualquier duda, la IA, nuestra amiga fiel jaja, o consultan al grupo.
-  A otro detalle importante, NO hagamos uso de etiquetas directamente para dar estilo, por ejemplo h1{ color: red}
-  porque al ser un solo archivo podemos cambiar todos los h1 del proyecto. Vamos a tener que crear clasess para referirnos a
-  las etiquetas, asi no pisamos el trabajo de otro compañeo.
-  
-
-  header: #0B2F2A
-  fondo: #1F3C39
-
-  color de tarjeta: background: radial-gradient(at top left, #128C7E 0%, #075E54 100%);
-*/
 :root {
     --colorFondo:#39635f;
     --colorPrimario:#0B2F2A;
@@ -180,9 +150,10 @@
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(31, 221, 205, 0.3);
     text-align: center;
-    background-image: url('../img/imgTarjetas.png');
-    background-size: cover;
     color: var(--colorTerciario);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../img/fondoGeneral2.png');
+    background-size: cover;
 }
 
 .contenedorMiniCartas {
@@ -210,6 +181,41 @@
 .miniCarta:hover {
     transform: scale(1.03);
 }
+
+.seccionSomos {
+    width: 100%;
+    padding: 80px 0;
+    border-top: 3px solid var(--colorSecundario); /*Línea divisoria*/
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../img/fondoGeneral2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cuadroInformativo {
+    width: 85%;
+    max-width: 1000px;
+    color: var(--colorTerciario);
+    text-align: center;
+}
+
+.cuadroInformativo h2 {
+    color: var(--colorTerciario);
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.cuadroInformativo p {
+    line-height: 1.8;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
 .piePagina{
     color: var(--colorTerciario);
     background-color: var(--colorPrimario);
@@ -219,6 +225,9 @@
 .piePagina p {
     margin: 0;
 }
+
+
+
 
 .bodyProyectos{
     margin: 0;

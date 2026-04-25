@@ -309,7 +309,7 @@ background-size: cover;
 .aD{
     text-decoration-line: blink,underline;
     gap: 20px;
-    color: var(--colorTexto);
+    color: var(--colorTerciario);
 }
 .aD:hover {
     transform: scale(1.1);
@@ -321,6 +321,7 @@ background-size: cover;
 }
 .bD{
     list-style: none;
+    color: var(--colorTerciario);
 }
 /*---------------Proyectos---------------*/
 .bodyProyectos{

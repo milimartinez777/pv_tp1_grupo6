@@ -24,21 +24,28 @@ LAYOUT BASE de una plataforma de "Gestión de Proyectos". Un SITIO ESTÁTICO por
                 Detalles de Proyecto
             3.detalle.html
                 Detalles del Sistema de Gestión de una biblioteca escoolar
-            4.perfil.html
+                DESCRIPCION DE DETALLE HTML
+                El Encabezado:  Se muestra el titulo Gestión de Biblioteca, los autores y tiene los botones para moverse a otras partes de nuestra web.
+                En el cuerpo/body: Dos párrafos que cuentan por qué es importante el sistema: sirve para que los libros no se pierdan, para saber quién los tiene y para que los alumnos encuentren lo que buscan más rápido.
+                Una lista con enlaces directos a docs importantes, como el plano del sistema y el manual de uso.
+                Un pequeño cuadro donde se reconoce quién es la coordinadora y quién se encarga de la investigación.
+
+                DESCRIPCION DE DETALLE EN STYLE
+                En la cabecera: tenemos una caja con bordes redondeados y mucho espacio alrededor para que el título no quede "apretado".
+
+                El cuadro de texto: El párrafo de descripción ahora está dentro de una "cajita" blanca (o de un color claro) con bordes gruesos y redondeados, permitiendo que destaque.
+
+                Luego tenemos efectos de flotado, cambio de colores y zoom haciendo que sea atractivo para el lector
+            
+              4.perfil.html
                 Información Personal del usuario
                 
-DESCRIPCION DE DETALLE HTML
-El Encabezado:  Se muestra el titulo Gestión de Biblioteca, los autores y tiene los botones para moverse a otras partes de nuestra web.
+                Para la maquetación de la página web solicitada nos dijeron que usaramos el lenguaje HTML (para la estructura  y su contenido) seguido de estilos mediante CSS para la parte visual .
+                Para el perfil de usuario nos da como punto de partida su imagen, nombre y rol el cual tambien vamos a tener en cuenta a la hora de crear un perfil de usuario para ello tuvimos en cuenta:
 
-En el cuerpo/body: Dos párrafos que cuentan por qué es importante el sistema: sirve para que los libros no se pierdan, para saber quién los tiene y para que los alumnos encuentren lo que buscan más rápido.
-
-Una lista con enlaces directos a docs importantes, como el plano del sistema y el manual de uso.
-
-Un pequeño cuadro donde se reconoce quién es la coordinadora y quién se encarga de la investigación.
-
-DESCRIPCION DE DETALLE EN STYLE
-En la cabecera: tenemos una caja con bordes redondeados y mucho espacio alrededor para que el título no quede "apretado".
-
-El cuadro de texto: El párrafo de descripción ahora está dentro de una "cajita" blanca (o de un color claro) con bordes gruesos y redondeados, permitiendo que destaque.
-
-Luego tenemos efectos de flotado, cambio de colores y zoom haciendo que sea atractivo para el lector
+                *Uso de semántica correcta con etiquetas de ...
+                *Bloque: header, main, nav, footer, aside.
+                *Contenido:section, article, table, form, h1-h6, ul, li,p.
+                *Navegación:etiquetas a. 
+                *Uso de estilos  con atributo y elemento style además de un archivo con su respetiva carpeta css y con la implementación del grid y flexbox con una variable global "root".
+                Contamos con dos secciones divididas como Perfiles, en donde se ubican perfiles ya existentes con una imagen que define su sexo y otra sección Nuevo Perfil que cuenta con un formulario para ingreso de datos.   

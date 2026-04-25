@@ -21,7 +21,17 @@ LAYOUT BASE de una plataforma de "Gestión de Proyectos". Un SITIO ESTÁTICO por
             1.index.html
                 Dashboard Principal
             2.proyectos.html
-                Detalles de Proyecto
+                Explorador de Proyectos
+                Construcción de la página de Proyectos (HTML)
+                Para organizar esta sección, empezamos con un header que contiene el título principal y un menú de navegación creado con una lista desordenada (<ul>), lo que permite moverse fácilmente entre las distintas páginas del sitio.
+                El contenido central se agrupó en una etiqueta main, la cual dividimos en dos partes funcionales: un lateral (<aside>) donde colocamos los filtros de búsqueda mediante etiquetas (select) y (option) para elegir categorías o años, y una zona principal (<section>) destinada a mostrar todos los trabajos académicos de forma ordenada.
+                Dentro de la galería, cada trabajo se representó con la etiqueta (<article>), funcionando como una tarjeta independiente que contiene toda la información del proyecto. 
+                Usamos etiquetas (<h3>) para los nombres de los proyectos, (<img>) para las capturas de pantalla y (<p>) para las descripciones y categorías.
+                También incluimos etiquetas (<a>) para crear los botones de acceso a los detalles y saltos de línea (<br>) para generar espacios visuales.
+                Finalmente, cerramos la estructura con un (<footer>) que identifica nuestra carrera y el año actual, logrando un código semántico y fácil de entender.
+                 
+
+
             3.detalle.html
                 Detalles del Sistema de Gestión de una biblioteca escoolar
                 DESCRIPCION DE DETALLE HTML
